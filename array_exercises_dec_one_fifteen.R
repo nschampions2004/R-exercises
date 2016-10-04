@@ -26,4 +26,7 @@ arr <- array(temp$N, dim = c(3,2,4), dimnames = list(c("Ready", "Set", "Go")))
 print(arr)
 
 #solution for exercise 9
-print(arr[[2,4,2]])
+print(arr[[]])
+
+#solution for exercise 10
+
