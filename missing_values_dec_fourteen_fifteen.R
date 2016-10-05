@@ -38,7 +38,13 @@ X <- rbind (c1,c2,c3, deparse.level=1)
 X[!complete.cases(X), ]
 
 #solution for #9
-df <- data.frame(Name = c(NA, "Joseph", "Martin", NA, "Andrea"), Sales = c(15, 18, 21, 56, 60), Price = c(34, 52, 21, 44, 20), stringsAsFactors = FALSE) 
+df <- data.frame(Name = c(NA, 'Joseph', 'Martin', NA, 'Andrea'), Sales = c(15, 18, 21, 56, 60), Price = c(34, 52, 21, 44, 20), stringsAsFactors = FALSE) 
+df <- df[!(is.na(df$Name)==T), ]
+df
 
+#solution for #10
+df <- data.frame(Name = c(NA, 'Joseph', 'Martin', NA, 'Andrea'), Sales = c(15, 18, 33, 56, 60), Price = c(34, 52, 21, 44, 20), stringsAsFactors = FALSE) 
+df <- df[!(is.na(df$Name)==T) & !(df$Name == 'Andrea'), ]
+df
 
 
