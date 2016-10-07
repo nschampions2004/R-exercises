@@ -35,6 +35,22 @@ Designation <- c("Manager", "Project Head", "Marketing Head")
 matz <- matrix(paste(Names, Designation), nrow = 3, ncol = 1)
 
 #solution for exercise 8
+vector(mode = "character", length = 10)
+
+#solution for exercise 9
+first <- c("a", "b", "c", "d", "e")
+second <- c("a", "b", "c", "d", "e")
+print(for(i in length(first)){
+  paste(first, second)
+})
+#I didn't know how to do this my solution is above\
+c(outer(letters[1:5], letters[1:5], FUN = paste, sep = ""))
+
+
+#solution for exercise 10
+df <- data.frame(Date = c("12/12/2000 12:11:10"))
+strptime(df$Date, "%m/%d/%Y %H:%M:%S")
+
 
 
 
