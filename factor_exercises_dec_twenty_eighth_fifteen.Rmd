@@ -1,0 +1,80 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+#Solution to Problem 1
+```{r}
+x = c(1, 2, 3, 3, 5, 3, 2, 4, NA)
+factor(x)
+#a
+```
+#Solution to Problem 2
+```{r}
+x <- c(11, 22, 47, 47, 11, 47, 11)
+factor(x, levels = c(11, 22, 47), ordered = TRUE)
+#c
+```
+#Solution to Problem 3
+```{r}
+z <- c("p", "a" , "g", "t", "b")
+z[3] <- "b"
+z
+#c
+```
+#Solution to Problem 4
+```{r}
+z <- factor(c("p", "q", "p", "r", "q"))
+levels(z) <- c("w", "q", "r")
+z
+```
+#Solution to Problem 5
+```{r}
+s1 <- factor(sample(letters, size=5, replace=TRUE))
+s2 <- factor(sample(letters, size=5, replace=TRUE))
+#s3 <- paste(s1, s2)
+#my solution is above it paired up s1 and s2 into s3, here's their solution
+s3 <- factor(c(levels(s1)[s1], levels(s2)[s2]))
+s3
+```
+#Solution to Problem 6
+```{r}
+data <- datasets::iris
+data$Sepal.Length 
+cut(data$Sepal.Length, breaks = c(4.3, 5.02, 5.74, 6.46, 7.18, 7.9))
+```
+#Solution to Problem 7
+```{r}
+data <- datasets::iris
+table(iris$Sepal.Length < 5, factor(iris$Species))
+```
+#Solution to Problem 8
+```{r}
+responses <- factor(c("Agree", "Agree", "Strongly Agree", "Disagree", "Agree", "Strongly Disagree"))
+levels(responses) <- c("Agree", "Strongly Agree", "Disagree", "Strongly Disagree")
+responses
+```
+
+#Solution to Problem 9
+```{r}
+x <- data.frame(q=c(2, 4, 6), p=c("a", "b", "c"))
+#x[ , x$p <- c("fertiliser1", "fertiliser2", "fertiliser3")]
+#my solution above didn't work
+x$p <- factor(x$p, levels = c("a", "b", "c"), labels = c("fertiliser1", "fertiliser2", "fertiliser3"))
+x
+```
+#Solution to Problem 10
+```{r}
+x <- factor(c("high", "low", "medium", "high", "high", "low", "medium"))
+x_dat <- data.frame(levels = unique(x), value = as.numeric(unique(x)))
+x_dat
+```
+
+
+
+
+
+
+
+
+
