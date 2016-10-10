@@ -1,0 +1,89 @@
+---
+title: "List Exercises"
+output: html_notebook
+---
+
+#Solution to Exercise 1
+```{r}
+p <- c(2,7,8) 
+q <- c("A", "B", "C")
+x <- list(p, q)
+x[2]
+x
+#x[2] returns the second column
+```
+#Solution to Exercise 2
+```{r}
+w <- c(2, 7, 8)
+v <- c("A", "B", "C")
+x <- list(w, v)
+x[[2]][1] <- "K" 
+x
+```
+#Solution to Exercise 3
+```{r}
+a <- list ("x"=5, "y"=10, "z"=15)
+sum(unlist(a))
+#have to unlist the elements if I want to use them
+```
+#Solution to Exercise 4
+```{r}
+Newlist <- list(a=1:10, b="Good morning", c="Hi")
+Newlist$a <- Newlist$a + 1
+Newlist
+
+```
+
+#Solution to Exercise 5
+```{r}
+b <- list(a=1:10, c="Hello", d="AA")
+b$a[-2]
+```
+
+#Solution to Exercise 6
+```{r}
+x <- list(a=5:10, c="Hello", d="AA")
+x$NewItem <- "NewItem"
+x
+```
+
+#Solution to Exercise 7
+```{r}
+y <- list("a", "b", "c")
+names(y) <- c("one", "two", "three")
+y
+```
+
+
+#Solution to Exercise 8
+```{r}
+x <- list(y=1:10, t="Hello", f="TT", r=5:20)
+length(x$r)
+```
+
+#Solution to Exercise 9
+```{r}
+string <- "Grand Opening"
+a <- strsplit(string, split = " ")
+list(a[[1]][[1]], a[[1]][[2]]) 
+```
+#Solution to Exercise 10
+```{r}
+y <- list("a", "b", "c")
+q <- list("A", "B", "C", "a", "b", "c")
+q_y <- list(setdiff(q, y))
+q_y
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
