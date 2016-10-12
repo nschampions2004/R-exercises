@@ -1,0 +1,45 @@
+---
+title: "Data Frame Exercises"
+author: "Kyle"
+date: "October 11, 2016"
+output: html_document
+---
+
+---
+title: "Data Fram Exercises"
+output: html_notebook
+---
+
+#Solution to Problem 1
+```{r}
+data <- data.frame(Age = c(25, 31, 23, 52, 76, 49, 26), Height = c(177, 163, 190, 179, 163, 183, 164), Weight = c(57, 69, 83, 75, 70, 83, 53), Sex = as.factor(c("F", "F", "M", "M", "F", "M", "F")),row.names = c("Alex", "Lilly", "Mark", "Oliver", "Martha", "Lucas", "Caroline"))
+levels(data$Sex) <- c("M", "F")
+data
+```
+
+#Solution to Problem 2
+```{r}
+Working <- as.character(c("Yes", "No", "No", "Yes", "Yes", "No", "Yes"))
+rows <- c("Alex", "Lilly", "Mark", "Oliver", "Martha", "Lucas", "Caroline")
+data_1 <- data.frame(Working, row.names = rows)
+data_1
+str(data_1$Working)
+```
+#a = 7 x 1
+#b = Factor for $Working
+
+#Solution to Problem 3
+```{r}
+str(state.center)
+data_st <- data.frame(state.center)
+```
+
+#Solution to Problem 4
+```{r}
+First_Name <- c("Aaron", "Jordy", "Randall", "Richard", "Davante", "Jeff")
+Last_Name <- c("Rodgers", "Nelson", "Cobb", "Rogers", "Adams", "Janis")
+Number <- c(12, 87, 18, 82, 17, 81)
+Packers_skill <- data.frame(First_Name, Last_Name, Number)
+Packers_skill
+Packers_skill[order(Packers_skill$First_Name), ]
+```
