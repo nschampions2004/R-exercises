@@ -53,7 +53,8 @@ cbind(data_8, data_7)
 
 #Solution ot Problem 10
 link_9 <- "http://r-exercises.com/wp-content/uploads/2015/12/Table6.txt"
-data_9 <- read.table(link_9)
+data_9 <- read.table(link_9, skip = 1, header = T, nrows = 7, flush = TRUE, comment.char = "@", stringsAsFactors = F)
+data_9
 
 
 
@@ -62,4 +63,4 @@ data_9 <- read.table(link_9)
 
 
 
-'
+
