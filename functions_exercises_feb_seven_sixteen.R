@@ -22,7 +22,7 @@ num.checker(c, r)
 datasets::mtcars
 name_type <- function(d){
   print(names(d))
-  print(typeof(names(d)))
+  print(sapply(d, class))
 }
 name_type(mtcars)
 ###still gotta fix the 'printing the type of each columns'
