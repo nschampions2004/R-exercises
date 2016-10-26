@@ -1,0 +1,62 @@
+---
+title: "Bind Exercises"
+output: html_notebook
+---
+#Solution to Exercise 1
+```{r}
+a <- 1:5 ; b <- 1:5
+first <- cbind(a,b)
+first
+a <- 1:5 ; b <- c('1', '2', '3', '4', '5')
+second <- cbind(a,b)
+second
+a <- 1:5 ; b <- 1:4; c <- 1:3
+third <- cbind(a, b, c)
+third
+```
+#Solution to Exercise 2
+```{r}
+a <- 1:5 ; b <- 1:5
+first <- rbind(a,b)
+first
+a <- 1:5 ; b <- c('1', '2', '3', '4', '5')
+second <- rbind(a,b)
+second
+a <- 1:5 ; b <- 1:4; c <- 1:3
+third <- rbind(a,b,c)
+third
+```
+
+#Solution to Exercise 3
+```{r}
+a <- matrix(1:12, ncol=4); b <- matrix(21:35, ncol=5)
+first <- cbind(a, b)
+first
+# a <- matrix(1:12, ncol=4); b <- matrix(21:35, ncol=3)
+# second <- cbind(a, b)
+# second
+a <- matrix(1:39, ncol=3); b <- matrix(LETTERS, ncol=2)
+third <- cbind(a, b)
+third
+```
+#Solution to Exercise 4
+```{r}
+a <- matrix(1:1089, ncol = 33)
+a_twenty <- a[ ,rep(1:33, 21)]
+dim(a_twenty)
+```
+#Solution to Exercise 5
+```{r}
+
+
+```
+
+
+
+
+
+
+
+
+
+

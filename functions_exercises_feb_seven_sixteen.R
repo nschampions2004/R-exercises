@@ -75,7 +75,7 @@ f.count(c(1:9, rep(10, 100)), 10)
 #Solution to Exercise 6
 msd_med <- function(x, y){
   if(y == TRUE){
-    print(paste("The mean of the vector is", mean(x), ". The standard deviation of the vector is", sd(x), ". The median of the vector is", median(x), "."))
+    print(paste("The mean of the vector is", round(mean(x), 1), ". The standard deviation of the vector is", round(sd(x), 1), ". The median of the vector is", round(median(x), 1), "."))
 } else { 
     print(mean(x))
     print(sd(x))}
@@ -110,6 +110,27 @@ f.div(13)
 
 #Solution for Exercise 8
 #Create a function that given a data frame, and a number or character will return the data frame with the character or number changed to NA.
-
-
-
+# df <- data.frame(x = c("a", "b", "c", "d", "e", "f"), y = 1:24)
+# f.na <- function(x) {
+#   if(for(i in 1:length(x)){
+#     mode(x[i]) == "character" || mode(x[i]) == "numeric")}
+#   {
+#       x[i] <- NA
+# } else {
+#     x
+#   }
+# }
+# f.na(df)
+# 
+#to loop through a data frame you need a for loop for the columns and the rows
+f.na <- function (df, otherna) {
+  for(i in 1:ncol (df)) {
+    for(j in 1:nrow (df)) {
+      if(df[j,i] == otherna) {
+        df[j,i] <- NA
+      }
+    }
+  }
+  df
+}
+carsnew <- f.na(cars, 10)
