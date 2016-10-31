@@ -1,0 +1,48 @@
+---
+title: "Get Your Stuff In Order"
+output: html_notebook
+---
+#Solution to Exercise 1
+```{r}
+x <- c(1,3,2,5,4)
+sort(x)
+sort(x, decreasing = TRUE)
+```
+
+#Solution to Exercise 2
+```{r}
+x <- matrix(1:100, ncol = 10)
+x1 <- x[order(-x[, 2]), ]
+x1
+
+x2 <- x[, order(-x[2, ])]
+x2
+```
+
+#Solution to Exercise 3
+```{r}
+# x3 <- x[, order(-x[, 1])]
+# x3
+
+x[, 1] <- sort(x[, 1], decreasing = T)
+x
+```
+#Solution to Exercise 4
+```{r}
+is.unsorted(women$height)
+is.unsorted(women$weight)
+bmi <- (women$weight/(women$height*women$height))*703
+is.unsorted(bmi)
+data <- cbind(women, bmi)
+#data <- order(data$bmi)
+data
+```
+#Solution to Exercise 5
+```{r}
+data <- CO2[ order(CO2$Plant),]
+data
+
+data <- CO2[order(CO2$uptake) & order(CO2$Plant, decreasing = TRUE), ]
+data
+```
+

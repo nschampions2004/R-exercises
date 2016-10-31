@@ -47,13 +47,60 @@ dim(a_twenty)
 ```
 #Solution to Exercise 5
 ```{r}
+a <- data.frame(v1=1:5, v2=LETTERS[1:5]) ; b <- data.frame(var1=6:10, var2=LETTERS[6:10])
+first <- cbind(a, b)
+first
+
+ a <- data.frame(v1=1:6, v2=LETTERS[1:6]) ; b <- data.frame(var1=6:10, var2=LETTERS[6:10])
+ second <- cbind(a, b)
+```
+#Solution to Exercise 6
+```{r}
+a <- data.frame(v1=1:5, v2=LETTERS[1:5]) ; b <- data.frame(v1=6:10, v2=LETTERS[6:10])
+#you could bind them Row wise and column wise
+temp <- cbind(a,b)
+temp_1 <- rbind(a,b)
+temp 
+temp_1
+
+a <- data.frame(v1=1:6, v2=LETTERS[1:6]) ; b <- data.frame(v2=6:10, v1=LETTERS[6:10])
+#you could bind them row wise, you could not bind them column wise
+temp <- rbind(a,b)
+temp
+```
+
+#Solution to Exercise 7
+```{r}
+v3 <- 1:5
+temp <- rbind(a, b)
+temp
+temp <- cbind(temp, v3)
+temp
 
 
 ```
 
+#Solution to Exercise 8
+```{r}
+a <- matrix(1:12, ncol=4); b <- matrix(21:35, ncol=5)
+first <- cbind(a, b)
+first
 
 
+a <- matrix(1:39, ncol=3); b <- matrix(LETTERS, ncol=2)
+third <- cbind(a, b)
+third 
+second <- cbind(first, third)
+fourth <- rbind(first, third) 
+second 
+fourth
+```
 
+#Solution to Exercise 9
+```{r}
+
+
+```
 
 
 
